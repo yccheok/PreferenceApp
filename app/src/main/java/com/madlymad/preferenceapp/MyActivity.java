@@ -74,4 +74,12 @@ public class MyActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        // Hackish way to restore?!
+        this.getSupportActionBar().setTitle("Main fragment (Restore via hackish way)");
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 }
