@@ -36,7 +36,7 @@ public class MyActivity extends AppCompatActivity implements
     public boolean onPreferenceStartScreen(PreferenceFragmentCompat preferenceFragmentCompat,
                                            PreferenceScreen preferenceScreen) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        MyPreferenceFragment fragment = new MyPreferenceFragment();
+        MyInnerPreferenceFragment fragment = new MyInnerPreferenceFragment();
         Bundle args = new Bundle();
         args.putString(PreferenceFragmentCompat.ARG_PREFERENCE_ROOT, preferenceScreen.getKey());
         fragment.setArguments(args);
