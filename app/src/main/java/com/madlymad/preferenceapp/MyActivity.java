@@ -18,6 +18,9 @@ public class MyActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.getSupportActionBar().setTitle("Main fragment");
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         if (savedInstanceState == null) {
             // Create the fragment only when the activity is created for the first time.
             // ie. not after orientation changes
@@ -64,6 +67,8 @@ public class MyActivity extends AppCompatActivity implements
             case R.id.action_menu:
                 Toast.makeText(this, item.getTitle() + " pressed!", Toast.LENGTH_SHORT).show();
                 return true;
+            case android.R.id.home:
+                this.finish();
         }
 
         return super.onOptionsItemSelected(item);
